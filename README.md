@@ -14,4 +14,6 @@ That's it. This is experimental stuff.
 - From a command line pointing at `thonny-py5-runner-main` execute `pip install .`
 
 - Close and open Thonny again and it should appear under the Tools menu like this:
-![image](https://user-images.githubusercontent.com/3694604/127754752-3a49a592-dc44-4a94-9233-f8eb9232a7ea.png)
+
+![py5](https://user-images.githubusercontent.com/3694604/127754556-d1ec817a-67d7-4b41-b501-a2057e12ad85.gif)
+
