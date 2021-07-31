@@ -4,7 +4,7 @@
 
 That's it. This is experimental stuff.
 
-- Install [pyy]() first, I guess...
+- Install [py5](https://py5.ixora.io/install/) first, I guess...
 
 - Set at Thonny's options, Environment Variables settings, JAVA_HOME to the root of your py5 working Python env, should look something like this:
  > ![image](https://user-images.githubusercontent.com/3694604/127754669-b133ab1f-3bb6-40fa-b3cb-9cf30adfb974.png)
