@@ -68,7 +68,7 @@ class py5Sbot:
             if self.filename is not None and self.filename[-3:] in (".py", "bot"):
                 self.editor.save_file()
                 sp = site.getsitepackages()[0] 
-                py5_runner = os.path.joint(sp, 'py5_tools', 'tools', 'run_sketch.py')
+                py5_runner = os.path.join(sp, 'py5_tools', 'tools', 'run_sketch.py')
                 run_sketch = subprocess.run(
                    [get_interpreter_for_subprocess(), "-m", py5_runner, self.filename, "-S"],
                   #  ["sbot", self.filename], 
@@ -112,7 +112,7 @@ class py5Sbot:
         self.workbench.add_command(
             command_id="run_with_sbot",
             menu_name="tools",
-            command_label="Execute with py5's sbot command",
+            command_label="Execute py5's run_sketch command",
             handler=self.run_with_sbot,
             default_sequence="<Control-Alt-5>",
             extra_sequences=["<<CtrlAlt5InText>>"],
