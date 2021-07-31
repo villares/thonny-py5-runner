@@ -67,11 +67,11 @@ class py5Sbot:
         else:
             if self.filename is not None and self.filename[-3:] in (".py", "bot"):
                 self.editor.save_file()
-                sp = site.getsitepackages()[0] 
-                py5_runner = os.path.join(sp, 'py5_tools', 'tools', 'run_sketch.py')
+                # sp = site.getsitepackages()[0] # this strategy did not work
+                # py5_runner = os.path.join(sp, 'py5_tools', 'tools', 'run_sketch.py')
                 run_sketch = subprocess.run(
-                   [get_interpreter_for_subprocess(), "-m", py5_runner, self.filename, "-S"],
-                  #  ["sbot", self.filename], 
+                  # [get_interpreter_for_subprocess(), "-m", py5_runner, self.filename],
+                    ["run_sketch", self.filename], 
                     capture_output=True,
                     text=True,
                 )
@@ -93,9 +93,8 @@ class py5Sbot:
                         final_message = final_message[0].upper() + final_message[1:]
 
                     else:
-                        self.editor._load_file(self.filename, keep_undo=True)
                         final_title = 'Done'
-                        final_message = message_without_emojis.splitlines()[-1]  
+                        final_message = message_without_emojis  
             else:
                 final_title = NOT_COMPATIBLE.error_type
                 final_message = NOT_COMPATIBLE.description
