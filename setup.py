@@ -18,5 +18,5 @@ setuptools.setup(
         'Operating System :: OS Independent',
     ],
     install_requires=['thonny >= 3.0.0', 'py5'],
-    python_requires='>=3.7',
+    python_requires='>=3.8',
 )
